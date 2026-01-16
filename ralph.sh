@@ -1,8 +1,32 @@
 #!/bin/bash
-# Ralph Wiggum - Long-running AI agent loop
+# Ralph Wiggum - Long-running AI agent loop (DEPRECATED)
 # Usage: ./ralph.sh [max_iterations]
+#
+# DEPRECATION NOTICE:
+# This script uses Amp CLI and is deprecated in favor of the new Claude Code native implementation.
+#
+# New usage:
+#   Interactive:  /ralph (in Claude Code)
+#   CI/Automation: ./ralph-runner.sh
+#
+# The new system uses Claude Code's Task tool to spawn sub-agents, removing the Amp dependency.
+# See README.md for full documentation on the new architecture.
+#
+# This script is kept for backwards compatibility but will be removed in a future version.
 
 set -e
+
+echo "╔═══════════════════════════════════════════════════════════════╗"
+echo "║  DEPRECATION WARNING                                          ║"
+echo "║  This script (ralph.sh) uses Amp CLI and is deprecated.       ║"
+echo "║                                                               ║"
+echo "║  New options:                                                 ║"
+echo "║    Interactive:   /ralph (in Claude Code)                     ║"
+echo "║    CI/Automation: ./ralph-runner.sh                           ║"
+echo "║                                                               ║"
+echo "║  Continuing with legacy execution in 3 seconds...             ║"
+echo "╚═══════════════════════════════════════════════════════════════╝"
+sleep 3
 
 MAX_ITERATIONS=${1:-10}
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
