@@ -1,0 +1,33 @@
+{
+  "project": "McRalph Test",
+  "branchName": "ralph/test-run",
+  "description": "Test PRD to verify the McRalph system works correctly",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Create test output file",
+      "description": "As a developer, I want to verify Ralph can create files.",
+      "acceptanceCriteria": [
+        "Create a file at test-output/ralph-test.txt",
+        "File contains the text 'Ralph was here!'",
+        "File is created successfully"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "Update test output with timestamp",
+      "description": "As a developer, I want to verify Ralph can update files.",
+      "acceptanceCriteria": [
+        "Append a timestamp line to test-output/ralph-test.txt",
+        "Format: 'Timestamp: YYYY-MM-DD HH:MM:SS'",
+        "Original content is preserved"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
